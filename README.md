@@ -7,6 +7,7 @@ This repository contains the backend API for managing users, drones, missions, a
 - [Endpoints](#endpoints)
 - [Setup](#setup)
 - [Running the API](#running-the-api)
+- [Docker Deployment](#docker-deployment)
 - [Dependencies](#dependencies)
 
 ## Endpoints
@@ -62,6 +63,7 @@ This repository contains the backend API for managing users, drones, missions, a
 To set up the project locally, follow these steps:
 
 1. **Clone the repository:**
+
    ```bash
    git clone <repository_url>
    cd flytbase-backend-assignment
@@ -80,8 +82,28 @@ To set up the project locally, follow these steps:
 ## Running the API
 
 To start the server:
+
+```bash
+ npx nodemon server.js
+```
+
+## Docker Deployment
+
+For Docker deployment, you can use the Docker image available on Docker Hub:
+
+- [Docker Hub Repository](https://hub.docker.com/repository/docker/soham727/flytbase-backend-assignment)
+
+To run the Docker container:
+
+1. **Pull the Docker image:**
+
    ```bash
-    npx nodemon server.js
+    docker run -d -p 3000:3000 --env-file .env soham727/flytbase-backend-assignment:latest
+   ```
+
+2. **Run the Docker container:**
+   ```bash
+    docker run -p 3000:3000 soham727/flytbase-backend-assignment:latest
    ```
 
 ## Dependencies
