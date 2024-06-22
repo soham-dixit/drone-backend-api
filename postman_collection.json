@@ -1,0 +1,363 @@
+{
+	"info": {
+		"_postman_id": "3dd67288-09dd-431e-a31a-4c527cc4da6c",
+		"name": "flytbase-backend-assignment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "24862822"
+	},
+	"item": [
+		{
+			"name": "Authentication",
+			"item": [
+				{
+					"name": "Register User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"Soham\",\r\n    \"password\":\"password123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/api/auth/register"
+					},
+					"response": []
+				},
+				{
+					"name": "Login User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"Soham\",\r\n    \"password\":\"password123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/api/auth/login"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Sites",
+			"item": [
+				{
+					"name": "Add  Site",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2Njc3NGM0YzA4MzllZmQ1ZTIxODJiNjAiLCJpYXQiOjE3MTkwOTQzNzIsImV4cCI6MTcxOTA5Nzk3Mn0.yeBRMNr2_UsJmeHEya2wOFAkRSe-nJUtdq5M0VeKYPw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"site_name\": \"Site A\",\r\n  \"position\": {\r\n    \"latitude\": \"12.3456\",\r\n    \"longitude\": \"78.9101\"\r\n  }\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/api/sites"
+					},
+					"response": []
+				},
+				{
+					"name": "Retrieve Missions",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2Njc3NGM0YzA4MzllZmQ1ZTIxODJiNjAiLCJpYXQiOjE3MTkwOTQzNzIsImV4cCI6MTcxOTA5Nzk3Mn0.yeBRMNr2_UsJmeHEya2wOFAkRSe-nJUtdq5M0VeKYPw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/api/sites/66774cd30839efd5e2182b64/missions"
+					},
+					"response": []
+				},
+				{
+					"name": "Retrieve Sites",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2Njc3NGM0YzA4MzllZmQ1ZTIxODJiNjAiLCJpYXQiOjE3MTkwOTQzNzIsImV4cCI6MTcxOTA5Nzk3Mn0.yeBRMNr2_UsJmeHEya2wOFAkRSe-nJUtdq5M0VeKYPw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/api/sites/"
+					},
+					"response": []
+				},
+				{
+					"name": "Retrieve Drones",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2Njc3NGM0YzA4MzllZmQ1ZTIxODJiNjAiLCJpYXQiOjE3MTkwOTQzNzIsImV4cCI6MTcxOTA5Nzk3Mn0.yeBRMNr2_UsJmeHEya2wOFAkRSe-nJUtdq5M0VeKYPw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"site_name\": \"Site A\",\r\n  \"position\": {\r\n    \"latitude\": \"12.3456\",\r\n    \"longitude\": \"78.9101\"\r\n  }\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/api/sites/66774cd30839efd5e2182b64/drones"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Site",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2Njc3NGM0YzA4MzllZmQ1ZTIxODJiNjAiLCJpYXQiOjE3MTkwOTQzNzIsImV4cCI6MTcxOTA5Nzk3Mn0.yeBRMNr2_UsJmeHEya2wOFAkRSe-nJUtdq5M0VeKYPw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"site_name\": \"Updated Site A\",\r\n  \"position\": {\r\n    \"latitude\": \"12.3456\",\r\n    \"longitude\": \"78.9101\"\r\n  }\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/api/sites/66774cd30839efd5e2182b64"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Site",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2Njc3NGM0YzA4MzllZmQ1ZTIxODJiNjAiLCJpYXQiOjE3MTkwOTQzNzIsImV4cCI6MTcxOTA5Nzk3Mn0.yeBRMNr2_UsJmeHEya2wOFAkRSe-nJUtdq5M0VeKYPw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/api/sites/66774cd30839efd5e2182b64"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Drones",
+			"item": [
+				{
+					"name": "Add Drone",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2Njc3NGM0YzA4MzllZmQ1ZTIxODJiNjAiLCJpYXQiOjE3MTkwOTQzNzIsImV4cCI6MTcxOTA5Nzk3Mn0.yeBRMNr2_UsJmeHEya2wOFAkRSe-nJUtdq5M0VeKYPw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"drone_id\": \"DRN123\",\r\n  \"name\": \"Drone 1\",\r\n  \"drone_type\": \"Quadcopter\",\r\n  \"make_name\": \"Manufacturer X\",\r\n  \"site\": \"66774cd30839efd5e2182b64\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/api/drones"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Drone",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2Njc3NGM0YzA4MzllZmQ1ZTIxODJiNjAiLCJpYXQiOjE3MTkwOTQzNzIsImV4cCI6MTcxOTA5Nzk3Mn0.yeBRMNr2_UsJmeHEya2wOFAkRSe-nJUtdq5M0VeKYPw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"drone_id\": \"DRN123\",\r\n  \"name\": \"Updated Drone 1\",\r\n  \"drone_type\": \"Quadcopter\",\r\n  \"make_name\": \"Manufacturer X\",\r\n  \"site\": \"66774cd30839efd5e2182b64\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/api/drones/66774ded0839efd5e2182b68"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Drone",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2Njc3NGM0YzA4MzllZmQ1ZTIxODJiNjAiLCJpYXQiOjE3MTkwOTQzNzIsImV4cCI6MTcxOTA5Nzk3Mn0.yeBRMNr2_UsJmeHEya2wOFAkRSe-nJUtdq5M0VeKYPw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/api/drones/66774ded0839efd5e2182b68"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Missions",
+			"item": [
+				{
+					"name": "Add Mission",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2Njc3NGM0YzA4MzllZmQ1ZTIxODJiNjAiLCJpYXQiOjE3MTkwOTQzNzIsImV4cCI6MTcxOTA5Nzk3Mn0.yeBRMNr2_UsJmeHEya2wOFAkRSe-nJUtdq5M0VeKYPw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Mission 1\",\r\n  \"speed\": 15,\r\n  \"waypoints\": [\r\n    { \"alt\": 100, \"lat\": 12.34, \"lng\": 56.78 },\r\n    { \"alt\": 120, \"lat\": 13.45, \"lng\": 57.89 }\r\n  ],\r\n  \"site\": \"66774cd30839efd5e2182b64\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/api/missions"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Mission",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2Njc3NGM0YzA4MzllZmQ1ZTIxODJiNjAiLCJpYXQiOjE3MTkwOTQzNzIsImV4cCI6MTcxOTA5Nzk3Mn0.yeBRMNr2_UsJmeHEya2wOFAkRSe-nJUtdq5M0VeKYPw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Updated Mission 1\",\r\n  \"speed\": 15,\r\n  \"waypoints\": [\r\n    { \"alt\": 100, \"lat\": 12.34, \"lng\": 56.78 },\r\n    { \"alt\": 120, \"lat\": 13.45, \"lng\": 57.89 }\r\n  ],\r\n  \"site\": \"66774cd30839efd5e2182b64\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/api/missions/66774f020839efd5e2182b74"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Mission",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2Njc3NGM0YzA4MzllZmQ1ZTIxODJiNjAiLCJpYXQiOjE3MTkwOTQzNzIsImV4cCI6MTcxOTA5Nzk3Mn0.yeBRMNr2_UsJmeHEya2wOFAkRSe-nJUtdq5M0VeKYPw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/api/missions/66774f020839efd5e2182b74"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
